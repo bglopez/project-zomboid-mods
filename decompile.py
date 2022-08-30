@@ -156,7 +156,7 @@ def decompile_class_file(class_file_path : str, pz_install_root : str):
     if os.path.exists(java_source_output_path):
         os.remove(java_source_output_path)
 
-    os.system(f"java -jar \"{get_decompiler_path()}\" \"{class_file_path}\" \"{java_source_output_path}\" ")
+    os.system(f"java -jar '{get_decompiler_path()}' '{class_file_path}' '{java_source_output_path}' ")
 
     fix_java_source_file(java_source_output_path)
 
